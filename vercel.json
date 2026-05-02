@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "anbu-scouting-dashboard",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
