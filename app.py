@@ -9,9 +9,7 @@ import scipy
 from scipy.spatial.distance import euclidean
 import sys
 
-# --- PARCHE DEFINITIVO PARA STLITE/PYODIDE ---
-# Bloqueamos pyarrow para que Plotly/Narwhals no intenten usarlo.
-sys.modules['pyarrow'] = None
+# --- PROCESAMIENTO ---
 
 # --- DATOS EMBEBIDOS ---
 # Datos integrados directamente para evitar errores de caché y lectura de archivos
