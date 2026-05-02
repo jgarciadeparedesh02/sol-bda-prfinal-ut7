@@ -39,14 +39,13 @@ st.markdown("""
 # --- CARGA DE DATOS ---
 @st.cache_data
 def load_data():
-    try:
-        df = pd.read_csv("players_data.csv")
-        return df
-    except Exception as e:
-        st.error(f"Error al cargar el dataset: {e}")
-        return None
+    return pd.read_csv("players_data.csv")
 
-df_raw = load_data()
+try:
+    df_raw = load_data()
+except Exception as e:
+    st.error(f"Error crítico: No se pudo cargar el archivo 'players_data.csv'. Detalles: {e}")
+    df_raw = None
 
 if df_raw is not None:
     # Métricas para análisis
